@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background-color: #000000;
+  color: #00ff00;
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for that terminal feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a; 
+  border-left: 1px solid #003300;
+}
+::-webkit-scrollbar-thumb {
+  background: #004400; 
+  border: 1px solid #00ff00;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #006600; 
+}
+
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0,0,0,0.2) 50%,
+    rgba(0,0,0,0.2)
+  );
+  background-size: 100% 4px; 
+  pointer-events: none;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+}
+
+/* Utility class to hide scrollbar but allow scroll */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
