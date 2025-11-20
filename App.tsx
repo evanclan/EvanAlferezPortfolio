@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import MatrixRain from './components/MatrixRain';
 import Home from './components/Home';
 import AiTools from './components/AiTools';
@@ -31,6 +31,8 @@ const ScrollHandler = () => {
 };
 
 const NavItem: React.FC<{ href: string, label: string, isActive?: boolean }> = ({ href, label, isActive }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const isExternal = href.startsWith('http');
   const className = `hover:text-white transition-colors relative overflow-hidden group cursor-pointer ${isActive ? 'text-white' : 'text-green-500'}`;
 
@@ -48,9 +50,40 @@ const NavItem: React.FC<{ href: string, label: string, isActive?: boolean }> = (
     );
   }
 
- // For BrowserRouter, linking to an anchor on the home page uses hash
-  // We support: '/ai-tools' OR '/#skills' (which goes to home then scrolls to skills)
-  
+  // For BrowserRouter, handle hash links properly
+  // If href starts with /#, navigate to / first, then handle hash
+  if (href.startsWith('/#')) {
+    const hash = href.substring(1); // Get #skills
+    const handleClick = (e: React.MouseEvent) => {
+      e.preventDefault();
+      if (location.pathname !== '/') {
+        // Navigate to home first with hash
+        navigate(hash);
+      } else {
+        // Already on home, just scroll to hash
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          // Update URL with hash
+          window.location.hash = hash;
+        }
+      }
+    };
+    
+    return (
+      <a 
+        href={hash}
+        onClick={handleClick}
+        className={className}
+      >
+        <span className="relative z-10">/ {label}</span>
+        <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-green-500 transform transition-transform origin-left ${isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+      </a>
+    );
+  }
+
+  // Regular routes like /ai-tools
   return (
     <Link 
       to={href}
@@ -81,7 +114,7 @@ const AppContent: React.FC = () => {
 
   const getNavHref = (item: string) => {
     if (item === 'ai-tools') return '/ai-tools';
-    // For BrowserRouter, hash links for home page sections
+    // Hash links for home page sections
     return `/#${item}`;
   };
 
