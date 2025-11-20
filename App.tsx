@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';
 import MatrixRain from './components/MatrixRain';
 import Home from './components/Home';
 import AiTools from './components/AiTools';
@@ -48,9 +48,8 @@ const NavItem: React.FC<{ href: string, label: string, isActive?: boolean }> = (
     );
   }
 
-  // For HashRouter, linking to an anchor on the home page requires explicit path
-  // If href is just '#id', Link treats it relative. 
-  // We want to support: '/ai-tools' OR '/#skills' (which goes to home then skills)
+ // For BrowserRouter, linking to an anchor on the home page uses hash
+  // We support: '/ai-tools' OR '/#skills' (which goes to home then scrolls to skills)
   
   return (
     <Link 
@@ -82,7 +81,7 @@ const AppContent: React.FC = () => {
 
   const getNavHref = (item: string) => {
     if (item === 'ai-tools') return '/ai-tools';
-    // In HashRouter, we always use absolute path with hash to ensure we get back to Home
+    // For BrowserRouter, hash links for home page sections
     return `/#${item}`;
   };
 
@@ -168,7 +167,7 @@ const AppContent: React.FC = () => {
 
       <footer className="border-t border-green-900/50 py-8 text-center text-green-800 text-xs bg-black/80 relative z-10">
         <p>EVAN_ALFEREZ_PORTFOLIO_SYSTEM &copy; {new Date().getFullYear()}</p>
-        <p>{lang === 'en' ? 'NO COOKIES. NO TRACKERS. JUST CODE.' : 'クッキーなし。追跡なし。コードのみ。'}</p>
+        <p>{lang === 'en' ? 'NO COOKIES. NO TRACKERS. JUST PURE REACT AND BLOOD.' : 'クッキーなし。追跡なし。コードのみ。'}</p>
       </footer>
     </div>
   );
