@@ -119,7 +119,7 @@ const TOOLS: Tool[] = [
     status: 'FREEMIUM',
     link: 'https://www.notta.ai',
     featured: true,
-    youtubeId: 'O3iE-B7Zq6o',
+    youtubeId: '2hHJ4Y5Ms6Q',
     recommendedFor: ['mariko', 'natsuki']
   },
   {
