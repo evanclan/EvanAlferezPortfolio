@@ -5,7 +5,7 @@ import { Language } from '../types';
 import { 
   Search, ExternalLink, Zap, Cpu, Image as ImageIcon, Video, Type, Mic, 
   ChevronLeft, ChevronRight, X, Play, Info, LayoutTemplate, 
-  Crown, Briefcase, FileText, HeartHandshake, Users, Sparkles 
+  Crown, Briefcase, FileText, HeartHandshake, Users, Sparkles, ChessKing
 } from 'lucide-react';
 
 interface Props {
@@ -72,6 +72,13 @@ const PERSONAS: Persona[] = [
     role: { en: 'HR / Relations', jp: '人事 / 渉外' },
     icon: <HeartHandshake className="w-5 h-5" />,
     color: 'text-purple-400'
+  },
+  {
+    id: 'shunsuke',
+    name: 'Shunsuke',
+    role: { en: 'The Master', jp: 'かえるマスター' },
+    icon: <ChessKing className="w-5 h-5" />,
+    color: 'text-green-400'
   }
 ];
 

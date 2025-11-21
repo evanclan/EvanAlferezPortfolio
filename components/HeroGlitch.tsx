@@ -8,8 +8,8 @@ const HeroGlitch: React.FC = () => {
   useEffect(() => {
     isMounted.current = true;
     const phrases = [
-      { l1: "WAKE UP,", l2: "VISITOR" },
-      { l1: "目を覚ませ、", l2: "訪問者" }
+      { l1: "WELCOME,", l2: "VISITOR" },
+      { l1: "ようこそ", l2: "訪問者" }
     ];
     
     let loopIndex = 0;
