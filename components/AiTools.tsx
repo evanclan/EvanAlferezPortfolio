@@ -5,7 +5,7 @@ import { Language } from '../types';
 import { 
   Search, ExternalLink, Zap, Cpu, Image as ImageIcon, Video, Type, Mic, 
   ChevronLeft, ChevronRight, X, Play, Info, LayoutTemplate, 
-  Crown, Briefcase, FileText, HeartHandshake, Users, Sparkles, ChessKing
+  Crown, Briefcase, FileText, HeartHandshake, Users, Sparkles, ChessKing, Bug
 } from 'lucide-react';
 
 interface Props {
@@ -79,6 +79,13 @@ const PERSONAS: Persona[] = [
     role: { en: 'The Master', jp: 'かえるマスター' },
     icon: <ChessKing className="w-5 h-5" />,
     color: 'text-green-400'
+  },
+  {
+    id: 'evan',
+    name: 'Evan',
+    role: { en: 'Bug Hunter', jp: 'バグハンター' },
+    icon: <Bug className="w-5 h-5" />,
+    color: 'text-red-400'
   }
 ];
 
