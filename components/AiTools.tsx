@@ -91,8 +91,8 @@ const PERSONAS: Persona[] = [
 
 const TOOLS: Tool[] = [
   {
-    id: 'claude-3-sonnet',
-    name: 'Claude 3.5 Sonnet',
+    id: 'claude 4',
+    name: 'Claude AI',
     category: 'TEXT',
     tags: ['Keigo / Writing', 'Summary', 'Coding'],
     description: { 
@@ -110,54 +110,54 @@ const TOOLS: Tool[] = [
     status: 'FREEMIUM',
     link: 'https://claude.ai',
     featured: true,
-    youtubeId: 'ODaQbK8tYF0',
+    youtubeId: 'Lvx9fOJkZnc',
     recommendedFor: ['mariko', 'saki', 'sallie']
   },
   {
-    id: 'notta',
-    name: 'Notta',
-    category: 'AUDIO',
-    tags: ['Meeting Minutes', 'Transcription', 'Efficiency'],
+    id: 'm365-copilot',
+    name: 'Microsoft 365 Copilot',
+    category: 'PRODUCTIVITY',
+    tags: ['Office', 'Word', 'Excel', 'PowerPoint'],
     description: { 
-      en: 'AI automated transcription tool specialized for Japanese meetings (Gijiroku).', 
-      jp: '日本の会議に特化したAI自動文字起こし・議事録作成ツール。' 
+      en: 'AI assistant built into Word, Excel, PowerPoint, Outlook, and Teams for office work.',
+      jp: 'Word・Excel・PowerPoint・Outlook・Teamsに組み込まれたオフィス向けAIアシスタント。' 
     },
     laymanDesc: {
-      en: "The ultimate secretary tool. It listens to your Zoom/Teams meetings or real-life audio, identifies who is speaking, and writes down everything. It then summarizes the 'Action Items' and 'Decisions' automatically.",
-      jp: "究極の秘書ツールです。Zoom/Teams会議や対面の音声を聴き取り、誰が話しているかを識別して全て書き起こします。さらに「決定事項」や「ネクストアクション」を自動で要約してくれます。"
+      en: "It lives inside the tools you already use. You can ask, ‘Make a report from this data’, ‘Draft a reply email’, or ‘Turn this document into slides’, and it prepares the first draft for you.",
+      jp: "いつも使っているWord・Excelなどの中にいるAIです。「このデータから報告書を作って」「このメールに返信文を作って」「この資料をスライドにして」などと頼むと、たたき台を作ってくれます。"
     },
     howItWorks: {
-      en: "1. Connect Notta to your Zoom/Google Meet.\n2. Let it record.\n3. After the meeting, click 'AI Summary' to get a formatted minute (Gijiroku) instantly.",
-      jp: "1. NottaをZoomやGoogle Meetに接続（または録音開始）します。\n2. 会議をそのまま行います。\n3. 終了後、「AI要約」をクリックすると、整形された議事録が一瞬で完成します。"
+      en: "1. Open Word, Excel, or PowerPoint.\n2. Click the Copilot button.\n3. Type a request like ‘Summarize this document’ or ‘Create 5 slides from this text’.\n4. Review and edit the draft it generates.",
+      jp: "1. WordやExcel、PowerPointを開きます。\n2. Copilotのボタンをクリックします。\n3. 「この文書を要約して」「この文章から5枚のスライドを作って」などと入力します。\n4. 生成されたたたき台を確認して、必要に応じて修正します。"
     },
-    status: 'FREEMIUM',
-    link: 'https://www.notta.ai',
+    status: 'PAID',
+    link: 'https://www.microsoft.com/ja-jp/microsoft-365/ai',
     featured: true,
-    youtubeId: '2hHJ4Y5Ms6Q',
-    recommendedFor: ['mariko', 'natsuki']
+    youtubeId: 'MNHaf2e33tg',
+    recommendedFor: ['sallie', 'natsuki']
   },
   {
-    id: 'gamma-app',
-    name: 'Gamma',
+    id: 'notion-ai',
+    name: 'Notion AI',
     category: 'PRODUCTIVITY',
-    tags: ['Presentations', 'Documents', 'Sales Decks'],
+    tags: ['Knowledge Base', 'Notes', 'Summarize'],
     description: { 
-      en: 'AI-powered medium for generating presentations, memos, and briefs instantly.', 
-      jp: 'プレゼンテーション、メモ、要約を即座に生成するAI搭載メディア。' 
+      en: 'AI features inside Notion for drafting, summarizing, and rewriting workspace documents.',
+      jp: 'Notion内で文章作成・要約・書き直しを行えるAI機能。' 
     },
     laymanDesc: {
-      en: "Imagine you have a professional designer sitting next to you. You give them a rough outline or a topic, and they instantly build a beautiful PowerPoint presentation with pictures and layouts tailored to your content.",
-      jp: "プロのデザイナーが隣にいると想像してください。トピックや概要を伝えるだけで、美しいデザインとレイアウトのプレゼンテーション資料を瞬時に作成してくれます。"
+      en: "Think of it as a helper living inside your notebooks and wikis. It can turn messy meeting notes into clean minutes, or write the first draft of a blog or manual for you.",
+      jp: "ノートや社内Wikiの中に住んでいる手伝い係のイメージです。ぐちゃぐちゃなメモをきれいな議事録にしたり、ブログやマニュアルのたたき台を書いてくれます。"
     },
     howItWorks: {
-      en: "1. Type your topic (e.g., 'Monthly Sales Report').\n2. Select 'Presentation'.\n3. Gamma generates an outline (which you can edit).\n4. Click 'Generate', and it builds all the slides with text and images in seconds.",
-      jp: "1. トピックを入力します（例：「月次売上報告書」）。\n2. 「プレゼンテーション」を選択します。\n3. 自動生成されたアウトラインを確認・編集します。\n4. 「生成」をクリックすると、数秒でスライドが完成します。"
+      en: "1. Open a Notion page.\n2. Type ‘/ai’ or click the AI button.\n3. Choose what you want (summarize, improve writing, translate, etc.).\n4. Adjust the result and save it on the page.",
+      jp: "1. Notionのページを開きます。\n2. 「/ai」と入力するか、AIボタンを押します。\n3. 「要約」「文章を良くする」「翻訳」など、やりたいことを選びます。\n4. 出力結果を調整して、そのままページに保存します。"
     },
     status: 'FREEMIUM',
-    link: 'https://gamma.app',
-    featured: true,
-    youtubeId: 'h58FkXGZfPQ',
-    recommendedFor: ['sallie', 'saki']
+    link: 'https://www.notion.so/product/ai',
+    featured: false,
+    youtubeId: 'A9nIIX89Gno',
+    recommendedFor: ['mariko', 'saki']
   },
   {
     id: 'canva-magic',
@@ -165,22 +165,367 @@ const TOOLS: Tool[] = [
     category: 'IMAGE',
     tags: ['Design', 'Social Media', 'Flyers'],
     description: { 
-      en: 'All-in-one design platform with generative AI for non-designers.', 
+      en: 'All-in-one design platform with generative AI for non-designers.',
       jp: 'ノンデザイナー向けの生成AIを搭載したオールインワンデザインプラットフォーム。' 
     },
     laymanDesc: {
-      en: "You don't need to be an artist. Just say 'Make an Instagram post about our summer sale', and it creates the layout, picks the colors, and writes the text. You can also expand images or erase background objects with one click.",
-      jp: "アーティストである必要はありません。「サマーセールのインスタ投稿を作って」と言うだけで、レイアウト作成、色選び、テキスト執筆まで行います。ワンクリックで画像の背景を消したり、範囲を拡張したりもできます。"
+      en: "You don’t need to be an artist. Say ‘Make an Instagram post about our summer campaign’ and it suggests designs with text and colors. You can also erase backgrounds or expand images with one click.",
+      jp: "絵が下手でも大丈夫です。「サマーキャンペーンのインスタ投稿を作って」と指示すると、デザイン案・色・文章まで提案してくれます。背景を消したり、画像を広げたりもワンクリックでできます。"
     },
     howItWorks: {
-      en: "1. Open Canva and select 'Magic Design'.\n2. Upload a photo of your product (optional).\n3. Describe what you want.\n4. It generates 4-5 template options for you to customize.",
-      jp: "1. Canvaを開き「Magic Design」を選択します。\n2. 商品写真をアップロードします（任意）。\n3. 作りたいものを説明します。\n4. 4〜5つのテンプレート案が生成されるので、好きなものを選んで調整します。"
+      en: "1. Open Canva and choose a design type (Instagram post, flyer, etc.).\n2. Click the Magic Design / AI tools.\n3. Describe what you want (theme, target, mood).\n4. Pick your favorite suggestion and edit text and colors.",
+      jp: "1. Canvaを開き、インスタ投稿やチラシなど作りたいものを選びます。\n2. 「Magic Design」やAIツールをクリックします。\n3. テーマ・ターゲット・雰囲気などを文章で説明します。\n4. 提案されたデザインから気に入ったものを選び、文字や色を調整します。"
     },
     status: 'FREEMIUM',
-    link: 'https://www.canva.com',
+    link: 'https://www.canva.com/ja_jp/',
+    featured: true,
+    youtubeId: 'MiHy29UiKTE',
+    recommendedFor: ['sallie', 'natsuki']
+  },
+  {
+    id: 'midjourney',
+    name: 'Midjourney',
+    category: 'IMAGE',
+    tags: ['Concept Art', 'Illustration', 'Logos'],
+    description: { 
+      en: 'Image generation tool that turns text prompts into detailed artwork.',
+      jp: '文章から高品質なイラストや画像を生成する画像生成ツール。' 
+    },
+    laymanDesc: {
+      en: "You type what you want to see, and it draws it for you. For example, ‘simple green frog logo, cute, for a study abroad company’ and it gives you several logo ideas.",
+      jp: "見たいイメージを文章で書くと、その絵を描いてくれます。例えば「留学エージェント用の、シンプルでかわいい緑のカエルロゴ」と書くと、いくつもロゴ案を出してくれます。"
+    },
+    howItWorks: {
+      en: "1. Join the Midjourney Discord server.\n2. Go to a ‘newbie’ channel.\n3. Type `/imagine` and then your description.\n4. Wait for the images, then upscale or make variations you like.",
+      jp: "1. MidjourneyのDiscordサーバーに参加します。\n2. 「newbie」などのチャンネルを開きます。\n3. `/imagine` の後に作りたい画像の説明を書きます。\n4. 出てきた画像から気に入ったものをアップスケールしたり、バリエーションを作ったりします。"
+    },
+    status: 'PAID',
+    link: 'https://www.midjourney.com',
     featured: false,
-    youtubeId: 'Vf60G5g6a3E',
+    youtubeId: 'KZ1wLoLPfrM',
     recommendedFor: ['natsuki', 'saki']
+  },
+  {
+    id: 'deepl-write',
+    name: 'DeepL Write',
+    category: 'TEXT',
+    tags: ['Proofreading', 'Translation', 'Polish'],
+    description: { 
+      en: 'AI writing assistant that fixes grammar and improves style in Japanese and English.',
+      jp: '日本語・英語の文法チェックや言い回し改善をしてくれるAIライティングアシスタント。' 
+    },
+    laymanDesc: {
+      en: "You paste your sentence, and it rewrites it into natural, polite language. Very useful for fixing strange Japanese or English in emails and documents.",
+      jp: "文章を貼り付けると、自然で丁寧な言い方に直してくれます。メールや資料の変な日本語・英語をきれいにしたいときにとても便利です。"
+    },
+    howItWorks: {
+      en: "1. Open DeepL Write in your browser.\n2. Select the language (e.g. Japanese or English).\n3. Paste your text.\n4. Compare the suggestions and choose the version you like.",
+      jp: "1. ブラウザでDeepL Writeを開きます。\n2. 言語（日本語・英語など）を選びます。\n3. 自分の文章を貼り付けます。\n4. 提案された文を見比べて、気に入ったものを選びます。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://www.deepl.com/write',
+    featured: false,
+    youtubeId: 'EeL9j1j0lX0',
+    recommendedFor: ['mariko', 'saki']
+  },
+  {
+    id: 'synthesia',
+    name: 'Synthesia',
+    category: 'VIDEO',
+    tags: ['Training Video', 'Avatar', 'Announcements'],
+    description: { 
+      en: 'AI video platform that creates presenter-style videos from text using virtual avatars.',
+      jp: 'テキストからバーチャルアバターが話す説明動画を作成できるAI動画プラットフォーム。' 
+    },
+    laymanDesc: {
+      en: "You don’t need a camera or studio. You just write a script like a speech, choose a person avatar, and the system creates a video of that person talking in Japanese.",
+      jp: "カメラもスタジオも不要です。話したい内容を文章で書いて、好みの人物アバターを選ぶと、その人が日本語で話している動画を自動で作ってくれます。"
+    },
+    howItWorks: {
+      en: "1. Log in to Synthesia.\n2. Choose a template or a blank video.\n3. Select an avatar and language (Japanese).\n4. Paste your script and generate the video.",
+      jp: "1. Synthesiaにログインします。\n2. テンプレートか白紙の動画を選びます。\n3. アバターと使用言語（日本語）を選びます。\n4. 台本となる文章を貼り付けて、動画を生成します。"
+    },
+    status: 'PAID',
+    link: 'https://www.synthesia.io',
+    featured: false,
+    youtubeId: 'vVAz437kfDo',
+    recommendedFor: ['sallie', 'natsuki']
+  },
+  {
+    id: 'notta',
+    name: 'Notta',
+    category: 'AUDIO',
+    tags: ['Transcription', 'Minutes', 'Meetings'],
+    description: { 
+      en: 'AI tool that transcribes and summarizes meetings in real time.',
+      jp: '会議の内容をリアルタイムで文字起こし＆要約してくれるAIツール。' 
+    },
+    laymanDesc: {
+      en: "During a meeting, it listens and turns speech into text automatically. After the meeting, you can quickly see who said what and check the important points without re-listening.",
+      jp: "会議中の発言を自動で文字にしてくれます。会議後は「誰が何を言ったか」「大事なポイントは何か」を音声を聞き直さずにすぐ確認できます。"
+    },
+    howItWorks: {
+      en: "1. Open Notta on your PC or phone.\n2. Start recording before the meeting begins.\n3. Let it run during the meeting.\n4. Afterward, read the transcript and use the auto summary.",
+      jp: "1. パソコンやスマホでNottaを開きます。\n2. 会議が始まる前に録音を開始します。\n3. 会議中はそのまま動かしておきます。\n4. 終了後、文字起こしと自動要約を確認します。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://www.notta.ai/ja',
+    featured: false,
+    youtubeId: '6crd7RQkiWY',
+    recommendedFor: ['mariko', 'saki']
+  },
+  {
+    id: 'ismartrecruit',
+    name: 'iSmartRecruit',
+    category: 'PRODUCTIVITY',
+    tags: ['HR', 'Recruitment', 'ATS'],
+    description: { 
+      en: 'Applicant tracking system with AI-based resume matching and Japanese support.',
+      jp: 'AIで応募者の経歴マッチングを行い、日本語にも対応した採用管理システム。' 
+    },
+    laymanDesc: {
+      en: "It’s like a database for job candidates. You upload resumes, and it helps you find people who match the job, instead of reading every resume one by one.",
+      jp: "応募者の情報をまとめて管理できるツールです。履歴書を登録しておくと、人事担当者が一枚一枚読む代わりに、条件に合いそうな人を探し出してくれます。"
+    },
+    howItWorks: {
+      en: "1. Import resumes into the system.\n2. Set the job requirements (skills, experience, language, etc.).\n3. Let the system rank candidates.\n4. Check the top matches and proceed with interviews.",
+      jp: "1. 応募者の履歴書をシステムに取り込みます。\n2. 求人条件（スキル・経験・言語など）を設定します。\n3. システムに候補者を自動でスコアリングさせます。\n4. 上位の候補者を確認し、面接などのステップに進みます。"
+    },
+    status: 'PAID',
+    link: 'https://www.ismartrecruit.com',
+    featured: false,
+    youtubeId: 'MLpB_gDaKXs',
+    recommendedFor: ['sallie', 'mariko']
+  },
+  {
+    id: 'google-duet',
+    name: 'Google Duet AI (Workspace)',
+    category: 'PRODUCTIVITY',
+    tags: ['Gmail', 'Docs', 'Sheets', 'Slides'],
+    description: { 
+      en: 'AI assistant across Google Workspace for writing, analysis, and image creation.',
+      jp: 'Gmail・ドキュメント・スプレッドシート・スライドで文章作成や分析を手伝うAIアシスタント。' 
+    },
+    laymanDesc: {
+      en: "It helps inside Gmail and Google Docs. You can ask it to write a draft email, summarize a long document, create sample data in Sheets, or generate images for slides.",
+      jp: "GmailやGoogleドキュメントの中で手伝ってくれるAIです。メールの下書きを作ったり、長い文書を要約したり、スプレッドシートに例のデータを入れたり、スライド用の画像を作ったりできます。"
+    },
+    howItWorks: {
+      en: "1. Open Gmail, Docs, or Sheets.\n2. Click the Duet AI (Help me write) button.\n3. Type what you want (e.g. ‘draft a polite reply’).\n4. Edit the suggested result and send or save it.",
+      jp: "1. Gmailやドキュメント、スプレッドシートを開きます。\n2. Duet AI（「文章を作成」など）のボタンを押します。\n3. 「丁寧な返信文を作って」など、やってほしいことを入力します。\n4. 提案された文章を修正して、そのまま送信・保存します。"
+    },
+    status: 'PAID',
+    link: 'https://workspace.google.com/intl/ja/products/duet-ai/',
+    featured: false,
+    youtubeId: 'sgzKqvjMUvQ',
+    recommendedFor: ['mariko', 'natsuki']
+  },
+  {
+    id: 'rimo-voice',
+    name: 'Rimo Voice',
+    category: 'AUDIO',
+    tags: ['Meetings', 'Minutes', 'Summary'],
+    description: { 
+      en: 'Japanese-focused AI that joins online meetings to create minutes and summaries.',
+      jp: 'オンライン会議に参加して自動で議事録や要約を作成してくれる日本発のAIツール。' 
+    },
+    laymanDesc: {
+      en: "You invite a bot to your Zoom or online meeting. It listens quietly, writes down who said what, and later shows you a clean summary and action items.",
+      jp: "Zoomなどのオンライン会議にボットを招待すると、静かに話を聞いて「誰が何を言ったか」を自動で記録し、あとからきれいな要約とToDoを見せてくれます。"
+    },
+    howItWorks: {
+      en: "1. Schedule a meeting and add Rimo Voice bot.\n2. Start the meeting as usual.\n3. Let the bot stay from start to end.\n4. After the meeting, open Rimo and read the transcript and summary.",
+      jp: "1. 会議を予約し、Rimo Voiceのボットを参加者に追加します。\n2. いつも通りオンライン会議を開始します。\n3. 会議の最初から最後までボットに参加させます。\n4. 終了後、Rimoの画面で文字起こしと要約を確認します。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://rimo.app',
+    featured: false,
+    youtubeId: 'Wwp7kXXwLsw',
+    recommendedFor: ['mariko', 'saki']
+  },
+  {
+    id: 'ideogram',
+    name: 'Ideogram',
+    category: 'IMAGE',
+    tags: ['Logos', 'Posters', 'Text-in-Image'],
+    description: { 
+      en: 'Image generator that is especially good at pictures with text, such as logos and posters.',
+      jp: 'ロゴやポスターなど、文字入りの画像生成が得意な画像生成AI。' 
+    },
+    laymanDesc: {
+      en: "You tell it what kind of design you want, and it makes images with readable letters. For example, ‘Japanese title + simple logo for English school’ and it creates poster-style images.",
+      jp: "欲しいデザインを説明すると、読める文字が入った画像を作ってくれます。例えば「英会話スクール用の日本語タイトル＋シンプルなロゴ」と書くと、ポスター風の画像をいくつも出してくれます。"
+    },
+    howItWorks: {
+      en: "1. Sign up and log in to Ideogram.\n2. Type your prompt including the text you want in the image.\n3. Generate images and download the ones you like.\n4. Use them in flyers, SNS, or presentations.",
+      jp: "1. Ideogramに登録・ログインします。\n2. 画像に入れたい文字も含めて、欲しいイメージを文章で入力します。\n3. 生成された画像から気に入ったものをダウンロードします。\n4. チラシ・SNS・プレゼン資料などに利用します。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://ideogram.ai',
+    featured: false,
+    youtubeId: 'J51POTfVnC8',
+    recommendedFor: ['natsuki', 'saki']
+  },
+  {
+    id: 'sakubun',
+    name: 'SAKUBUN',
+    category: 'TEXT',
+    tags: ['Copywriting', 'Blogs', 'Japanese'],
+    description: { 
+      en: 'Japanese-first AI writing tool with many ready-made templates.',
+      jp: '日本語向けテンプレートが豊富なAIライティングツール。' 
+    },
+    laymanDesc: {
+      en: "You pick a template like ‘blog article’, ‘product description’, or ‘SNS post’, fill in a few keywords, and it writes a Japanese draft for you.",
+      jp: "「ブログ記事」「商品説明」「SNS投稿」などのテンプレートを選び、キーワードを少し入れるだけで、日本語のたたき台文章を作ってくれます。"
+    },
+    howItWorks: {
+      en: "1. Log in to SAKUBUN.\n2. Choose a template (blog, ad copy, SNS, etc.).\n3. Enter your product, service, or theme.\n4. Let it generate text and then edit it to match your brand.",
+      jp: "1. SAKUBUNにログインします。\n2. 「ブログ」「広告文」「SNS」などのテンプレートを選びます。\n3. 商品名やサービス内容、テーマを入力します。\n4. 生成された文章を自社向けに少し調整して使います。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://sakubun.ai',
+    featured: false,
+    youtubeId: '9kGgHTcDCXs',
+    recommendedFor: ['sallie', 'mariko']
+  },
+  {
+    id: 'felo',
+    name: 'Felo',
+    category: 'TEXT',
+    tags: ['Search', 'Research', 'Mindmap'],
+    description: { 
+      en: 'Japan-born AI search engine that summarizes web results and creates outputs like slides or mind maps.',
+      jp: '検索結果を要約し、スライドやマインドマップも作れる日本発のAI検索エンジン。' 
+    },
+    laymanDesc: {
+      en: "Instead of just showing links, it reads the web for you and writes a clear summary. You can then ask it to turn that into a slide outline or a simple report.",
+      jp: "リンクの一覧だけでなく、インターネットの記事を代わりに読んで、わかりやすい要約を作ってくれます。その内容から、スライドの構成や簡単なレポートも作成できます。"
+    },
+    howItWorks: {
+      en: "1. Open Felo and type your question in Japanese.\n2. Read the AI summary and check the sources.\n3. Click options to make slides or a mind map from the result.\n4. Export or copy the text into your own document.",
+      jp: "1. Feloを開き、日本語で知りたいことを入力します。\n2. AIが作った要約と、元になった情報源を確認します。\n3. 結果からスライド案やマインドマップを作成するボタンを押します。\n4. 出てきた内容を自分の資料にコピーして活用します。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://felo.ai',
+    featured: false,
+    youtubeId: 'mcTIuAmFUl4',
+    recommendedFor: ['sallie', 'natsuki']
+  },
+  {
+    id: 'vrew',
+    name: 'Vrew',
+    category: 'VIDEO',
+    tags: ['Subtitles', 'Editing', 'YouTube'],
+    description: { 
+      en: 'Video editing tool that automatically adds Japanese subtitles and cuts silence.',
+      jp: '日本語の自動字幕や無音カットができる動画編集ツール。' 
+    },
+    laymanDesc: {
+      en: "You drop in a video, and it automatically writes subtitles based on the voice. You just fix small mistakes instead of typing everything by hand.",
+      jp: "動画を入れると、話している内容から自動で字幕を書いてくれます。あとは少し誤字を直すだけで、1から全部打ち込む必要がありません。"
+    },
+    howItWorks: {
+      en: "1. Install and open Vrew.\n2. Import your video file.\n3. Let it auto-generate subtitles.\n4. Edit the text and export the video with subtitles.",
+      jp: "1. Vrewをインストールして起動します。\n2. 動画ファイルを読み込みます。\n3. 自動字幕生成を実行します。\n4. 字幕の文字を調整して、字幕付き動画として書き出します。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://vrew.ai',
+    featured: false,
+    youtubeId: 'aR_bfHZ96QE',
+    recommendedFor: ['natsuki', 'saki']
+  },
+  {
+    id: 'miitel',
+    name: 'MiiTel',
+    category: 'AUDIO',
+    tags: ['Sales Calls', 'Voice Analysis', 'Call Center'],
+    description: { 
+      en: 'AI phone and meeting analysis tool that visualizes conversation quality.',
+      jp: '電話やオンライン商談の会話内容を分析・可視化する音声解析AIツール。' 
+    },
+    laymanDesc: {
+      en: "It records calls and shows easy-to-understand scores like ‘who talked too much’ or ‘pace of speaking’. Managers can see where to improve without listening to every call.",
+      jp: "通話を録音し、「どちらが話しすぎか」「話す速さはどうか」などをわかりやすく数値で見せてくれます。上司は全ての通話を聞かなくても、改善ポイントを把握できます。"
+    },
+    howItWorks: {
+      en: "1. Connect your phone or online meeting tool to MiiTel.\n2. Make calls or hold meetings as usual.\n3. After each call, check the dashboard for scores and key phrases.\n4. Use the feedback for training and coaching.",
+      jp: "1. 電話やオンライン会議ツールをMiiTelと連携します。\n2. いつも通り電話や商談を行います。\n3. 通話後にダッシュボードでスコアや重要な発言箇所を確認します。\n4. その結果をもとにトレーニングや指導に活用します。"
+    },
+    status: 'PAID',
+    link: 'https://miitel.com/jp',
+    featured: false,
+    youtubeId: 'FY7fHvcCsyU',
+    recommendedFor: ['sallie', 'mariko']
+  },
+  {
+    id: 'chatpdf',
+    name: 'ChatPDF',
+    category: 'TEXT',
+    tags: ['PDF', 'Summary', 'Q&A'],
+    description: { 
+      en: 'Tool that lets you chat with PDF files and get summaries or answers.',
+      jp: 'PDFファイルの内容について質問したり要約してもらえる対話型ツール。' 
+    },
+    laymanDesc: {
+      en: "You upload a PDF, and then you can ask, ‘What are the main points?’ or ‘What does this page mean?’ It answers in simple Japanese so you don’t need to read every page.",
+      jp: "PDFをアップロードすると、「大事なポイントは何？」「このページは何を言っている？」と質問でき、やさしい日本語で答えてくれます。全部のページを細かく読む必要がなくなります。"
+    },
+    howItWorks: {
+      en: "1. Go to ChatPDF and upload your PDF.\n2. Wait for it to process.\n3. Ask questions in Japanese about the content.\n4. Read the answers and copy important parts into your notes.",
+      jp: "1. ChatPDFのサイトを開き、PDFファイルをアップロードします。\n2. 処理が終わるのを待ちます。\n3. 内容について日本語で質問します。\n4. 返ってきた回答を読み、必要な部分を自分のメモにコピーします。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://www.chatpdf.com/ja',
+    featured: false,
+    youtubeId: 'mrg1Nej97Ik',
+    recommendedFor: ['mariko', 'saki']
+  },
+  {
+    id: 'ai-chatkun',
+    name: 'AIチャットくん (LINE)',
+    category: 'TEXT',
+    tags: ['LINE', 'Chatbot', 'Everyday Help'],
+    description: { 
+      en: 'ChatGPT-style AI bot you can use directly in LINE.',
+      jp: 'LINE上でそのまま使えるChatGPT風AIチャットボット。' 
+    },
+    laymanDesc: {
+      en: "You just add it as a LINE friend. When you are on the train or at home, you can ask it to rewrite emails, translate, or explain something in simple Japanese.",
+      jp: "LINEの友だちとして追加するだけで使えます。電車の中や家にいるときに、「メール文を直して」「翻訳して」「わかりやすく説明して」などと頼むことができます。"
+    },
+    howItWorks: {
+      en: "1. Add the official AIチャットくん account on LINE.\n2. Open the chat and type your question or text.\n3. Ask what you want (rewrite, translate, summarize, etc.).\n4. Copy the answer into your email or document.",
+      jp: "1. LINEで公式アカウント「AIチャットくん」を友だち追加します。\n2. トーク画面を開き、質問や文章を送ります。\n3. 「書き直して」「翻訳して」「要約して」など、やってほしいことを伝えます。\n4. 返ってきた文章をメールや資料にコピーして使います。"
+    },
+    status: 'FREEMIUM',
+    link: 'https://picon-inc.com/ai-chat',
+    featured: false,
+    youtubeId: '0muxA4k6Wys',
+    recommendedFor: ['mariko', 'saki']
+  },
+  {
+    id: 'tegaki',
+    name: 'Tegaki',
+    category: 'TEXT',
+    tags: ['Handwritten Forms', 'OCR', 'Back Office'],
+    description: { 
+      en: 'AI service that reads Japanese handwritten forms and turns them into digital data.',
+      jp: '日本語の手書き帳票を読み取り、デジタルデータに変換するAI-OCRサービス。' 
+    },
+    laymanDesc: {
+      en: "Instead of typing information from paper forms into Excel by hand, you scan them and the system reads most of the handwriting automatically.",
+      jp: "紙の申込書などを見ながら、1行ずつExcelに手入力する代わりに、スキャンするだけで手書き文字をほとんど自動で読み取ってくれます。"
+    },
+    howItWorks: {
+      en: "1. Scan or photograph handwritten forms.\n2. Upload the images to Tegaki.\n3. Let the system read and convert the characters.\n4. Export the data to CSV or connect it to your internal system.",
+      jp: "1. 手書きの申込書やアンケートをスキャン、または写真で撮影します。\n2. 画像をTegakiにアップロードします。\n3. システムに文字を読み取らせ、データ化します。\n4. CSVとして出力したり、社内システムに連携させたりします。"
+    },
+    status: 'PAID',
+    link: 'https://www.tegaki.ai',
+    featured: false,
+    youtubeId: 'LOrodhUpv3g',
+    recommendedFor: ['sallie', 'mariko']
   },
   {
     id: 'perplexity',
@@ -188,46 +533,24 @@ const TOOLS: Tool[] = [
     category: 'TEXT',
     tags: ['Research', 'Search', 'Citations'],
     description: { 
-      en: 'Conversational answer engine that cites sources for reliability.', 
-      jp: '信頼性のために情報源を引用する対話型回答エンジン。' 
+      en: 'Conversational answer engine that cites sources for reliability.',
+      jp: '信頼性のために情報源を引用してくれる対話型回答エンジン。' 
     },
     laymanDesc: {
-      en: "It's Google Search on steroids. Instead of giving you blue links to click on, it reads the websites for you and writes a summary answer, while showing you exactly where it found the information.",
-      jp: "Google検索の超進化版です。リンクのリストを表示するのではなく、ウェブサイトを代わりに読んで要約を作成し、その情報の出典元を正確に示してくれます。"
+      en: "It feels like Google Search plus a smart assistant. Instead of only giving links, it reads websites for you and writes an easy summary, showing where each part came from.",
+      jp: "Google検索と賢いアシスタントを合わせたような感じです。リンクを並べるだけでなく、サイトを代わりに読み、わかりやすい要約を書き、その内容がどのサイトから来たかも表示してくれます。"
     },
     howItWorks: {
-      en: "1. Ask a question like 'What are the marketing trends for 2025?'.\n2. Read the summary.\n3. Click the small numbers (citations) to verify the source.",
-      jp: "1. 「2025年のマーケティングトレンドは？」のように質問します。\n2. 要約を読みます。\n3. 小さな番号（引用）をクリックして、情報源を確認します。"
+      en: "1. Go to Perplexity.\n2. Ask a question like ‘Study abroad trends in Japan’.\n3. Read the summary answer.\n4. Click the small source marks to check the original pages.",
+      jp: "1. Perplexityのサイトを開きます。\n2. 「日本の留学トレンドは？」のように質問します。\n3. 出てきた要約を読みます。\n4. 小さな出典マークをクリックして、元のページを確認します。"
     },
     status: 'FREE',
     link: 'https://www.perplexity.ai',
     featured: false,
     youtubeId: '4C4aT6UvGg4',
     recommendedFor: ['sallie', 'mariko']
-  },
-  {
-    id: 'chatgpt',
-    name: 'ChatGPT 4o',
-    category: 'TEXT',
-    tags: ['General', 'Analysis', 'Brainstorming'],
-    description: { 
-      en: 'Omni-model capable of reasoning, voice, and complex analysis.', 
-      jp: '推論、音声、複雑な分析が可能なオムニモデル。' 
-    },
-    laymanDesc: {
-      en: "The best all-rounder. Great for brainstorming ideas, analyzing data in spreadsheets, or translating documents. It's less specialized than the others but can do a bit of everything.",
-      jp: "最高のオールラウンダーです。アイデア出し、スプレッドシートのデータ分析、文書翻訳に最適です。他のツールほど特化していませんが、あらゆることを少しずつこなせます。"
-    },
-    howItWorks: {
-      en: "1. Open the app.\n2. Talk to it like a colleague.\n3. Use it to check your thinking or get a second opinion on a plan.",
-      jp: "1. アプリを開きます。\n2. 同僚のように話しかけます。\n3. 自分の考えを確認したり、計画に対するセカンドオピニオンを得るために使用します。"
-    },
-    status: 'FREEMIUM',
-    link: 'https://chat.openai.com',
-    featured: false,
-    youtubeId: 'c2D3iOqK44w',
-    recommendedFor: ['sallie', 'saki', 'mariko', 'natsuki']
   }
+  
 ];
 
 const CATEGORY_ICONS = {
