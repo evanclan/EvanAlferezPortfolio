@@ -46,8 +46,8 @@ interface Persona {
 
 const PERSONAS: Persona[] = [
   {
-    id: 'sallie',
-    name: 'Sallie',
+    id: 'salliee',
+    name: 'Salliee',
     role: { en: 'The Boss', jp: '代表 / ボス' },
     icon: <Crown className="w-5 h-5" />,
     color: 'text-yellow-400'
@@ -111,7 +111,7 @@ const TOOLS: Tool[] = [
     link: 'https://claude.ai',
     featured: true,
     youtubeId: 'Lvx9fOJkZnc',
-    recommendedFor: ['mariko', 'saki', 'sallie']
+    recommendedFor: ['mariko', 'saki', 'salliee', 'shunsuke']
   },
   {
     id: 'm365-copilot',
@@ -134,7 +134,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.microsoft.com/ja-jp/microsoft-365/ai',
     featured: true,
     youtubeId: 'MNHaf2e33tg',
-    recommendedFor: ['sallie', 'natsuki']
+    recommendedFor: ['salliee', 'natsuki','mariko']
   },
   {
     id: 'notion-ai',
@@ -180,7 +180,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.canva.com/ja_jp/',
     featured: true,
     youtubeId: 'MiHy29UiKTE',
-    recommendedFor: ['sallie', 'natsuki']
+    recommendedFor: ['saki', 'natsuki','mariko']
   },
   {
     id: 'midjourney',
@@ -203,7 +203,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.midjourney.com',
     featured: false,
     youtubeId: 'KZ1wLoLPfrM',
-    recommendedFor: ['natsuki', 'saki']
+    recommendedFor: ['salliee', 'saki']
   },
   {
     id: 'deepl-write',
@@ -226,7 +226,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.deepl.com/write',
     featured: false,
     youtubeId: 'EeL9j1j0lX0',
-    recommendedFor: ['mariko', 'saki']
+    recommendedFor: ['mariko', 'saki','shunsuke','salliee']
   },
   {
     id: 'synthesia',
@@ -249,7 +249,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.synthesia.io',
     featured: false,
     youtubeId: 'vVAz437kfDo',
-    recommendedFor: ['sallie', 'natsuki']
+    recommendedFor: ['salliee', 'evan']
   },
   {
     id: 'notta',
@@ -272,7 +272,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.notta.ai/ja',
     featured: false,
     youtubeId: '6crd7RQkiWY',
-    recommendedFor: ['mariko', 'saki']
+    recommendedFor: ['mariko', 'saki','shunsuke','salliee', 'natsuki']
   },
   {
     id: 'ismartrecruit',
@@ -295,7 +295,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.ismartrecruit.com',
     featured: false,
     youtubeId: 'MLpB_gDaKXs',
-    recommendedFor: ['sallie', 'mariko']
+    recommendedFor: ['salliee', 'mariko', 'nastsuki']
   },
   {
     id: 'google-duet',
@@ -318,7 +318,7 @@ const TOOLS: Tool[] = [
     link: 'https://workspace.google.com/intl/ja/products/duet-ai/',
     featured: false,
     youtubeId: 'sgzKqvjMUvQ',
-    recommendedFor: ['mariko', 'natsuki']
+    recommendedFor: ['mariko', 'natsuki','shunsuke','salliee']
   },
   {
     id: 'rimo-voice',
@@ -341,7 +341,7 @@ const TOOLS: Tool[] = [
     link: 'https://rimo.app',
     featured: false,
     youtubeId: 'Wwp7kXXwLsw',
-    recommendedFor: ['mariko', 'saki']
+    recommendedFor: ['mariko', 'saki','nastsuki']
   },
   {
     id: 'ideogram',
@@ -364,7 +364,7 @@ const TOOLS: Tool[] = [
     link: 'https://ideogram.ai',
     featured: false,
     youtubeId: 'J51POTfVnC8',
-    recommendedFor: ['natsuki', 'saki']
+    recommendedFor: ['salliee', 'saki', 'evan']
   },
   {
     id: 'sakubun',
@@ -387,7 +387,7 @@ const TOOLS: Tool[] = [
     link: 'https://sakubun.ai',
     featured: false,
     youtubeId: '9kGgHTcDCXs',
-    recommendedFor: ['sallie', 'mariko']
+    recommendedFor: ['salliee', 'mariko', 'saki']
   },
   {
     id: 'felo',
@@ -410,7 +410,7 @@ const TOOLS: Tool[] = [
     link: 'https://felo.ai',
     featured: false,
     youtubeId: 'mcTIuAmFUl4',
-    recommendedFor: ['sallie', 'natsuki']
+    recommendedFor: ['salliee', 'natsuki', 'mariko','shunsuke', 'saki']
   },
   {
     id: 'vrew',
@@ -433,7 +433,7 @@ const TOOLS: Tool[] = [
     link: 'https://vrew.ai',
     featured: false,
     youtubeId: 'aR_bfHZ96QE',
-    recommendedFor: ['natsuki', 'saki']
+    recommendedFor: ['natsuki', 'saki','evan']
   },
   {
     id: 'miitel',
@@ -456,7 +456,7 @@ const TOOLS: Tool[] = [
     link: 'https://miitel.com/jp',
     featured: false,
     youtubeId: 'FY7fHvcCsyU',
-    recommendedFor: ['sallie', 'mariko']
+    recommendedFor: ['natsuki', 'mariko', 'saki']
   },
   {
     id: 'chatpdf',
@@ -502,7 +502,7 @@ const TOOLS: Tool[] = [
     link: 'https://picon-inc.com/ai-chat',
     featured: false,
     youtubeId: '0muxA4k6Wys',
-    recommendedFor: ['mariko', 'saki']
+    recommendedFor: ['mariko', 'saki', 'shunsuke', 'salliee']
   },
   {
     id: 'tegaki',
@@ -525,7 +525,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.tegaki.ai',
     featured: false,
     youtubeId: 'LOrodhUpv3g',
-    recommendedFor: ['sallie', 'mariko']
+    recommendedFor: ['salliee', 'mariko']
   },
   {
     id: 'perplexity',
@@ -548,7 +548,7 @@ const TOOLS: Tool[] = [
     link: 'https://www.perplexity.ai',
     featured: false,
     youtubeId: '4C4aT6UvGg4',
-    recommendedFor: ['sallie', 'mariko']
+    recommendedFor: ['salliee', 'mariko', 'shunsuke', 'saki']
   }
   
 ];

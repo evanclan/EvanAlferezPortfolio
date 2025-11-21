@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import MatrixRain from './components/MatrixRain';
 import Home from './components/Home';
@@ -98,8 +98,10 @@ const NavItem: React.FC<{ href: string, label: string, isActive?: boolean }> = (
 const AppContent: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [lang, setLang] = useState<Language>('en');
   const location = useLocation();
+  // Initialize language based on route: default to 'jp' for /ai-tools, 'en' otherwise
+  const [lang, setLang] = useState<Language>(location.pathname === '/ai-tools' ? 'jp' : 'en');
+  const prevPathnameRef = useRef(location.pathname);
 
   useEffect(() => {
     setMounted(true);
@@ -107,6 +109,16 @@ const AppContent: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Update language default only when navigating TO /ai-tools (not when leaving)
+  useEffect(() => {
+    const prevPathname = prevPathnameRef.current;
+    // Only set to 'jp' if navigating TO /ai-tools from another page
+    if (location.pathname === '/ai-tools' && prevPathname !== '/ai-tools') {
+      setLang('jp');
+    }
+    prevPathnameRef.current = location.pathname;
+  }, [location.pathname]);
 
   const toggleLang = () => {
     setLang(prev => prev === 'en' ? 'jp' : 'en');
